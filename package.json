@@ -1,9 +1,10 @@
 {
   "name": "@simple-creation/think-ui",
   "version": "1.0.0",
-  "description": "",
+  "description": "An enterprise-class UI design language and React components implementation",
   "main": "lib/index.js",
   "module": "es/index.js",
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/simple-creation/think-ui.git"
