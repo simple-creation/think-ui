@@ -1,7 +1,7 @@
 {
   "name": "smartui",
   "version": "0.0.1",
-  "description": "An enterprise-class UI design language and React components implementation",
+  "description": "",
   "main": "lib/index.js",
   "module": "es/index.js",
   "repository": {
@@ -14,7 +14,6 @@
     "url": "https://github.com/simple-creation/smart-ui/issues"
   },
   "homepage": "https://github.com/simple-creation/smart-ui#readme",
-  "description": "",
   "scripts": {
     "dev": "npx --max_old_space_size=8096 father doc dev --host 0.0.0.0",
     "build": "father build",
