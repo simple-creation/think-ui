@@ -1,9 +1,9 @@
 const options = {
   entry: 'src/index.js',
   doc: {
-    title: 'smart_ui',
+    title: 'think_ui',
     themeConfig: { mode: 'light' },
-    base: '/smart_ui'
+    base: '/think_ui'
   },
   extraBabelPlugins: [
     ['babel-plugin-import', {

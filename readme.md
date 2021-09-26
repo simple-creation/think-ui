@@ -29,11 +29,11 @@
 
 ## 1.安装
 ``` js
-npm install @smartui
+npm install @thinkui
 ```
 或者用yarn安装
 ``` js
-yarn add @smartui
+yarn add @thinkui
 ```
 ## 2. 使用
 ``` jsx
@@ -47,7 +47,7 @@ import {
   Drawer,
   Badge,
   Alert
-} from '@smartui'
+} from '@thinkui'
 import { useState } from 'react'
 import styles from './index.css'
 
