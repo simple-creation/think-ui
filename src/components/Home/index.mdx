@@ -1,14 +1,14 @@
 ---
-name: xui介绍
+name: gethinkui介绍
 route: /
 order: 0
 sidebar: true
 ---
 
-# xui——基于react的轻量级UI组件库
-xui是笔者开发的基于react的轻量级组件库，目前不依赖任何第三方ui组件库，支持按需导入，可定制。
+# ——基于react的轻量级UI组件库
+基于react的轻量级组件库，支持按需导入
 
-目前已开发完成如下ui组件：
+ui组件：
 * Button 按钮组件
 * Badge 徽标数组件
 * Alert 警告提示组件
@@ -17,20 +17,10 @@ xui是笔者开发的基于react的轻量级组件库，目前不依赖任何第
 * Notification 消息通知组件
 * Modal 对话框组件
 * Progress 进度条组件
-* Skeleton 专为个人网站准备的骨架屏组件
 * Switch 开关组件
-* Tag tag标签页组件
+* Tag 标签页组件
 
-正在开发的组件：
-* Form form表单组件
-* Table 列表组件
-* Menu 菜单组件
-* DropDown 下拉框组件
-
-后续会开发出更多优质轻量组件，敬请关注。
-
-# 技术实现与版本
-该组件库基于一下技术版本开发：
+# 依赖版本
 * react: 16.8.6
 * react-dom: 6.8.6
 * classnames
@@ -39,17 +29,16 @@ xui是笔者开发的基于react的轻量级组件库，目前不依赖任何第
 
 ## 安装
 ``` js
-npm install @thinkui
+npm install @gethink
 ```
 或者用yarn安装
 ``` js
-yarn add @thinkui
+yarn add @gethink
 ```
 ## 使用
 ``` jsx
 import { 
   Button,
-  Skeleton,
   Empty,
   Progress,
   Tag,
@@ -57,15 +46,5 @@ import {
   Drawer,
   Badge,
   Alert
-} from '@thinkui'
+} from 'gethink-ui'
 ```
-
-## 联系
-微信公众号《趣谈前端》
-欢迎提出更多issue以便让组件库更健壮
-
-## 组件学习指南
-具体使用方式可参考：
-[《精通react/vue组件设计》之实现一个可定制的进度条组件](https://juejin.im/post/5e366772f265da3e307710dd)
-
-

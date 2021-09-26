@@ -1,5 +1,4 @@
 export { default as Button } from './components/Button'
-export { default as Skeleton } from './components/Skeleton'
 export { default as Switch } from './components/Switch'
 export { default as Tag } from './components/Tag'
 export { default as Empty } from './components/Empty'

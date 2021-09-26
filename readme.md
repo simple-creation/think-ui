@@ -15,7 +15,6 @@
 * Notification 通知提示
 * Message 消息提示框组件
 * Empty 空状态组件
-* Skeleton 专为个人网站准备的骨架屏组件
 
 # 技术实现与版本
 该组件库基于一下技术版本开发：
@@ -29,17 +28,16 @@
 
 ## 1.安装
 ``` js
-npm install @thinkui
+npm install @gethink
 ```
 或者用yarn安装
 ``` js
-yarn add @thinkui
+yarn add @gethink
 ```
 ## 2. 使用
 ``` jsx
 import { 
   Button,
-  Skeleton,
   Empty,
   Progress,
   Tag,
@@ -47,7 +45,7 @@ import {
   Drawer,
   Badge,
   Alert
-} from '@thinkui'
+} from 'gethink-ui'
 import { useState } from 'react'
 import styles from './index.css'
 
@@ -65,7 +63,6 @@ export default function() {
       <Button className={styles.btn} type="primary" shape="circle">circle</Button>
       <Button className={styles.mb16} type="primary" block>primary&block</Button>
       <Button type="warning" shape="circle" block onClick={show}>circle&block</Button>
-      {/* <Skeleton /> */}
       <Progress
         percent={10}
       />

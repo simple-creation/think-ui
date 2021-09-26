@@ -17,7 +17,7 @@ import Icon from '../Icon'
     <Button onClick={
         () => {
             message.pop({
-                content: '趣谈前端学习打卡'
+                content: '前端学习打卡'
             })
         }
     }>默认通知信息</Button><br />
@@ -34,7 +34,7 @@ import Icon from '../Icon'
         () => {
             message.pop({
                 type: 'info',
-                content: '趣谈前端学习打卡'
+                content: '前端学习打卡'
             })
         }
     }>信息通知(info)</Button><br />
@@ -42,7 +42,7 @@ import Icon from '../Icon'
         () => {
             message.pop({
                 type: 'warning',
-                content: '趣谈前端学习打卡'
+                content: '前端学习打卡'
             })
         }
     }>警告通知(warning)</Button><br />
@@ -50,7 +50,7 @@ import Icon from '../Icon'
         () => {
             message.pop({
                 type: 'error',
-                content: '趣谈前端学习打卡'
+                content: '前端学习打卡'
             })
         }
     }>错误信息通知(error)</Button>
@@ -58,12 +58,12 @@ import Icon from '../Icon'
 
 ## 使用介绍
 ``` js
-import { message } from '@thinkui'
+import { message } from 'gethink-ui'
 
 // 使用
 message.pop({
     type: 'warning',
-    content: '趣谈前端学习打卡',
+    content: '前端学习打卡',
     duration: 0
 })
 
