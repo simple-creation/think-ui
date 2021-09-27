@@ -1,6 +1,6 @@
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
-import './index.less'
+import styled from 'styled-components'
 
 const colorArr = {
   'success': '#52c41a',
@@ -9,6 +9,44 @@ const colorArr = {
   'default': '#d9d9d9',
   'processing': '#1890ff'
 }
+
+const Container = styled.div`
+  position: relative;
+  display: inline-block;
+  .statusDotWrap {
+    display: inline-flex;
+    align-items: center;
+    .dot {
+      margin-right: 8px;
+      width: 6px;
+      height: 6px;
+      border-radius: 6px;
+    }
+  }
+  .badge {
+    position: absolute;
+    right: 0;
+    top: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+    height: 1.6em;
+    line-height: 1.6em;
+    min-width: 1.6em;
+    padding: 0 .4em;
+    border-radius: .8em;
+    transform: translate(50%, -50%);
+    text-align: center;
+    background-color: red;
+    color: #fff;
+    &.badgeDot {
+      min-width: 6px;
+      width: 6px;
+      height: 6px;
+      padding: 0;
+      overflow: hidden;
+    }
+  }
+`
 
 /**
  * 徽标数组件
@@ -35,7 +73,7 @@ function Badge(props) {
     style,
     children
   } = props
-  return <div className="xBadgeWrap">
+  return <Container>
     {
       status || color ? <div className="statusDotWrap">
         <span className="dot" style={{backgroundColor: color || colorArr[status] || colorArr.default}}></span>
@@ -56,7 +94,7 @@ function Badge(props) {
           { children }
         </div>  
     }
-  </div>
+  </Container>
 }
 
 Badge.propTypes = {

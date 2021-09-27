@@ -1,7 +1,46 @@
 import React, { useEffect } from 'react'
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
-import './index.less'
+import styled from 'styled-components'
+
+
+const Container = styled.div`
+    position: relative;
+    display: inline-block;
+    .xInputInner {
+        box-sizing: border-box;
+        padding: 4px 6px;
+        width: 320px;
+        color: rgba(0,0,0, .65);
+        font-size: 14px;
+        border: 1px solid rgb(217, 217, 217);
+        display: inline-block;
+        line-height: 1.5;
+        outline: none;
+        transition: box-shadow .3s, border .3s;
+        &::placeholder {
+            color: rgba(0,0,0, .2);
+        }
+        &:hover {
+            border-color: rgb(64, 169, 255);
+        }
+        &:focus {
+            border-color: rgb(64, 169, 255);
+            box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2)
+        }
+    }
+    .xIconInput {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        color: rgba(0,0,0, .45);
+        transform: translateY(-50%);
+        cursor: pointer;
+        &:hover {
+            color: rgba(0,0,0, .65);
+        }
+    }
+`
 
 /**
  * Input input组件
@@ -45,7 +84,7 @@ function Input(props) {
   useEffect(() => {
     autoFocus && textInput.current.focus()
   }, [])
-  return <div className="xInputWrap">
+  return <Container>
     <input
       className={classnames('xInputInner', className)}
       type={type} 
@@ -59,7 +98,7 @@ function Input(props) {
     {
       !!icon && <span className="xIconInput" onClick={handleIconClick}>{ icon }</span>
     }
-  </div>
+  </Container>
 }
 
 Input.propTypes = {

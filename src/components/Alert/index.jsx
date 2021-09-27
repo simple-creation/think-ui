@@ -1,7 +1,51 @@
 import { useState } from 'react'
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
-import './index.less'
+
+import styled from 'styled-components'
+const Container = styled.div`
+  box-sizing: border-box;
+  position: relative;
+  padding: 5px 12px;
+  margin-bottom: 16px;
+  border-radius: 3px;
+  &.success {
+    background-color: #f6ffed;
+    border: 1px solid #b7eb8f;
+  }
+  &.info {
+    background-color: #e6f7ff;
+    border: 1px solid #91d5ff;
+  }
+  &.error {
+    background-color: #fff1f0;
+    border: 1px solid #ffa39e;
+  }
+  &.warning {
+    background-color: #fffbe6;
+    border: 1px solid #ffe58f;
+  }
+
+  .alertMes {
+    margin-bottom:5px;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 14px;
+    line-height: 1.5em;
+  }
+  .alertDesc {
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 14px;
+    line-height: 1.5em;
+    word-break: break-all;
+  }
+  .closeBtn {
+    position: absolute;
+    right: 8px;
+    top: 5px;
+    color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+`
 
 /**
  * 警告提示组件
@@ -30,8 +74,8 @@ function Alert(props) {
     onClose && onClose()
   }
   return visible ? 
-    <div 
-      className={classnames('xAlertWrap', type || 'warning')}
+    <Container 
+      className={classnames( type || 'warning')}
       style={{
         opacity: visible ? '1' : '0',
         ...style
@@ -42,7 +86,7 @@ function Alert(props) {
       {
         !!closable && <span className='closeBtn' onClick={handleColse}>{ closeText ? closeText : 'x' }</span>
       }
-    </div> : null
+    </Container> : null
 }
 
 Alert.propTypes = {

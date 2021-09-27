@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
 import * as Fa from 'react-icons/fa'
-import './index.less'
 
 /**
  * Icon Icon组件

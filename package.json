@@ -1,6 +1,6 @@
 {
   "name": "gethink-ui",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An enterprise-class UI design language and React components implementation",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -9,7 +9,7 @@
     "url": "git+https://github.com/simple-creation/think-ui.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/simple-creation/think-ui/issues"
   },
@@ -32,7 +32,8 @@
     "jsoneditor": "^8.1.0",
     "querystring": "^0.2.0",
     "rc-notification": "^4.0.0-rc.1",
-    "react-icons": "^3.9.0"
+    "react-icons": "^3.9.0",
+    "styled-components": "^5.3.1"
   },
   "files": [
     "dist",

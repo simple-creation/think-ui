@@ -1,6 +1,22 @@
 import Icon from '../Icon'
 import classnames from 'classnames'
-import './index.less'
+import styled from 'styled-components'
+
+
+const Container = styled.div`
+  padding-top: 80px;
+  padding-bottom: 80px;
+  font-size: 100px;
+  color: #999;
+  .emptyInner {
+    text-align: center;
+  }
+  p {
+    font-size: 16px;
+    text-align: center;
+  }
+`
+
 
 /**
  * 空状态组件
@@ -11,7 +27,7 @@ import './index.less'
 export default function Empty(props) {
   let { text, className, src } = props
   
-  return <div className={classnames('emptyWrap', className)}>
+  return <Container className={classnames(className)}>
     <div className="emptyInner">
       {
         src ? <img src={src} alt="空（empty）"/> :
@@ -19,5 +35,5 @@ export default function Empty(props) {
       }
     </div>
     <p>{ text ? text : '空空如也'}</p>
-  </div>
+  </Container>
 }

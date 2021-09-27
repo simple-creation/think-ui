@@ -1,7 +1,38 @@
 import { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
-import './index.less'
+import styled from 'styled-components'
+
+
+const Container = styled.div`
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  .xDrawerMask {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+  }
+  .xDrawerContent {
+    position: absolute;
+    top: 0;
+    padding: 16px;
+    height: 100%;
+    transition: all .3s;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0, .2);
+    .xCloseBtn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #ccc;
+      cursor: pointer;
+    }
+}
+`
 
 /**
  * Drawer 抽屉组件
@@ -59,8 +90,7 @@ function Drawer(props) {
   }, [props.visible, getContainer])
 
   const childDom = (
-    <div 
-      className="xDrawerWrap" 
+    <Container 
       style={{
         position: getContainer === false ? 'absolute' : 'fixed',
         width: visible ? '100%' : '0',
@@ -82,7 +112,7 @@ function Drawer(props) {
           !!closable && <span className="xCloseBtn" onClick={handleClose}>X</span>
         }
       </div>
-    </div>
+    </Container>
   )
 
   return getContainer === false ? childDom : ReactDOM.createPortal(childDom, getContainer)

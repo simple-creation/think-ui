@@ -3,7 +3,35 @@ import Notification from 'rc-notification'
 import Icon from '../Icon'
 import classnames from 'classnames'
 import 'rc-notification/assets/index.css'
-import './index.less'
+import styled from 'styled-components'
+
+
+const Container = styled.div`
+   display: flex;
+    padding: 5px;
+    align-items: center;
+    .iconWrap {
+        width: 36px;
+        display: inherit;
+        font-size: 16px;
+        &.info {
+         color: #1890ff;
+        }
+        &.success {
+            color: #52c41a;
+        }
+        &.warning {
+            color: #faad14;
+        }
+        &.error {
+            color: #f5222d;
+        }
+    }
+    .xMessageTit {
+        font-size: 16px;
+        font-weight: 500;
+    }
+`
 
 const xMessage = (function() {
   let message = null
@@ -46,7 +74,7 @@ const xMessage = (function() {
       closeIcon
     } = config
     message.notice({
-      content: <div className={classnames('xMessage', className )}>
+      content: <Container className={classnames(className )}>
         {
           (icon || ['info', 'success', 'error', 'warning'].indexOf(type) > -1) &&
           <div className={classnames('iconWrap', type)}>
@@ -58,7 +86,7 @@ const xMessage = (function() {
         <div className="xNoticeTit">
           { content }
         </div>
-      </div>,
+      </Container>,
       key,
       closable,
       getContainer,

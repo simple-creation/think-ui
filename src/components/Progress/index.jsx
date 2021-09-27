@@ -1,5 +1,29 @@
 import PropTypes from 'prop-types'
-import './index.less'
+import styled from 'styled-components'
+
+
+const Container = styled.div`
+  margin: 6px 3px;
+  display: inline-flex;
+  align-items: center;
+  .progressBar {
+    position: relative;
+    display: inline-block;
+    height: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    overflow: hidden;
+    .progressInnerBar {
+      position: absolute;
+      height: 100%;
+    }
+  }
+  .progressText {
+    margin-left: 6px;
+    margin-top: -2px;
+    font-size: 14px;
+  }
+`
 
 // 升序排序
 let sortArr = arr => arr.sort((a,b) => a[0] - b[0])
@@ -47,7 +71,7 @@ function Progress(props) {
   } = props
   return +percent === 100 && autoHidden ? 
     null : 
-    <div className="progressWrap">
+    <Container>
       <div className="progressBar" style={{ width: typeof width === 'number' ? width + 'px' : width }}>
         <div 
           className="progressInnerBar" 
@@ -61,7 +85,7 @@ function Progress(props) {
       {
         !hiddenText && <span className="progressText" style={{ color: textColor }}>{percent + '%'}</span>
       }
-    </div>
+    </Container>
 }
 
 Progress.propTypes = {
