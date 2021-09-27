@@ -1,6 +1,5 @@
 # 基于react的轻量级UI组件库
 
-目前已开发完成如下ui组件：
 * Button 按钮组件
 * Badge 徽标数组件
 * Alert 警告提示组件
@@ -9,19 +8,12 @@
 * Switch 开关组件
 * Tag tag标签页组件
 * Modal 轻量实用的模态窗组件
-* Icon组件（基于react-icons的二次封装）
+* Icon组件
 * Input 输入框组件
 * Spin 加载组件
 * Notification 通知提示
 * Message 消息提示框组件
 * Empty 空状态组件
-
-# 技术实现与版本
-该组件库基于一下技术版本开发：
-* react: 16.8.6
-* react-dom: 6.8.6
-* classnames
-
 # 文档demo演示
 
 # 使用
