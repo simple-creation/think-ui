@@ -1,5 +1,4 @@
 import classnames from 'classnames'
-import './index.less'
 import styled from 'styled-components'
 
 const Container = styled.div`
